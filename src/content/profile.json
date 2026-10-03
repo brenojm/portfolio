@@ -1,0 +1,269 @@
+{
+  "name": "Breno Magrani",
+  "avatar": "https://avatars.githubusercontent.com/u/102327389?s=400&v=4",
+  "headline": {
+    "pt": "Engenheiro de Software · Backend & Microsserviços",
+    "en": "Software Engineer · Backend & Microservices"
+  },
+  "location": {
+    "pt": "Petrópolis, Rio de Janeiro — Brasil",
+    "en": "Petrópolis, Rio de Janeiro — Brazil"
+  },
+  "typewriter": {
+    "pt": [
+      "microsserviços em Java.",
+      "streams em tempo real com Kafka.",
+      "APIs com Quarkus e Spring Boot.",
+      "sistemas que protegem dutos pelo Brasil.",
+      "software com agentes de IA e SDD.",
+      "software que escala."
+    ],
+    "en": [
+      "microservices in Java.",
+      "real-time streams with Kafka.",
+      "APIs with Quarkus and Spring Boot.",
+      "systems that protect pipelines across Brazil.",
+      "software with AI agents and SDD.",
+      "software that scales."
+    ]
+  },
+  "statement": {
+    "pt": "Eu projeto sistemas de alta escala e arquiteturas de microsserviços. Dados em tempo real, volumes massivos e código limpo que resolve problemas do mundo real.",
+    "en": "I design high-scale systems and microservice architectures. Real-time data, massive volumes, and clean code that solves real-world problems."
+  },
+  "about": [
+    {
+      "pt": "Sou engenheiro de software focado em sistemas de alta escalabilidade e arquitetura de microsserviços. Hoje atuo na T2M e, como terceirizado, na Transpetro, usando o ecossistema Java para entregar soluções robustas em projetos industriais complexos.",
+      "en": "I'm a software engineer focused on high-scalability systems and microservices architecture. I currently work at T2M and, as a contractor, at Transpetro, leveraging the Java ecosystem to deliver robust solutions for complex industrial projects."
+    },
+    {
+      "pt": "Minha especialidade é o backend com Spring Boot e Quarkus, criando microsserviços do zero. Trabalho com streaming de dados em tempo real usando Kafka e com grandes volumes em bancos NoSQL como Cassandra e MongoDB.",
+      "en": "My core expertise is backend development with Spring Boot and Quarkus, building microservices from scratch. I work with real-time data streaming using Kafka and high-volume data in NoSQL databases like Cassandra and MongoDB."
+    },
+    {
+      "pt": "Também venho levando IA para o dia a dia do desenvolvimento: Spec-Driven Development (SDD), agentes de IA e fluxos em que especificação, código e revisão andam juntos com LLMs.",
+      "en": "I've also been bringing AI into everyday development: Spec-Driven Development (SDD), AI agents, and workflows where specification, code and review move together with LLMs."
+    },
+    {
+      "pt": "Gosto de desafios de arquitetura, de otimizar performance na Azure e de resolver problemas reais com código limpo e eficiente.",
+      "en": "I'm passionate about architectural challenges, performance optimization on Azure, and solving real-world problems through clean, efficient code."
+    }
+  ],
+  "social": {
+    "linkedin": "https://www.linkedin.com/in/brenomagrani/",
+    "github": "https://github.com/brenojm",
+    "email": "breno.jm25@gmail.com"
+  },
+  "experience": [
+    {
+      "company": "Transpetro — Petrobras Transporte S.A.",
+      "short": "Transpetro",
+      "roles": [
+        {
+          "title": {
+            "pt": "Desenvolvedor de Software",
+            "en": "Software Developer"
+          },
+          "start": "2023-11",
+          "end": null
+        }
+      ],
+      "description": {
+        "pt": "Desenvolvimento de um sistema integrado de proteção de dutos — rastreando a malha de dutos pelo Brasil, monitorando profissionais e veículos em operação e gerenciando a resposta a eventos em áreas críticas.",
+        "en": "Building an integrated pipeline protection system — tracking pipelines across Brazil, monitoring professionals and vehicles during operations, and managing event responses in critical areas."
+      },
+      "highlights": [
+        {
+          "pt": "Microsserviços com Spring Boot e Java, mensageria em tempo real com Kafka e persistência de grandes volumes em Cassandra e MongoDB.",
+          "en": "Microservices with Spring Boot and Java, real-time messaging with Kafka, and high-volume storage in Cassandra and MongoDB."
+        },
+        {
+          "pt": "Aplicação web em Angular com experiência responsiva e moderna.",
+          "en": "Angular web application with a responsive, modern experience."
+        },
+        {
+          "pt": "App mobile multiplataforma em Ionic para operações de campo, com atualizações em tempo real.",
+          "en": "Cross-platform Ionic mobile app for field operations with real-time updates."
+        },
+        {
+          "pt": "Troubleshooting e otimização de performance para garantir a confiabilidade da operação.",
+          "en": "Troubleshooting and performance optimization to keep operations reliable."
+        }
+      ],
+      "tech": ["Java", "Spring Boot", "Kafka", "Cassandra", "MongoDB", "Angular", "Ionic"],
+      "engagement": {
+        "pt": "Terceirizado",
+        "en": "Contractor"
+      }
+    },
+    {
+      "company": "T2M — Test to Market",
+      "short": "T2M",
+      "location": {
+        "pt": "Petrópolis, RJ",
+        "en": "Petrópolis, RJ"
+      },
+      "roles": [
+        {
+          "title": {
+            "pt": "Desenvolvedor de Software Pleno",
+            "en": "Mid-level Software Developer"
+          },
+          "start": "2025-07",
+          "end": null
+        },
+        {
+          "title": {
+            "pt": "Desenvolvedor de Software Júnior",
+            "en": "Junior Software Developer"
+          },
+          "start": "2024-04",
+          "end": "2025-07"
+        },
+        {
+          "title": {
+            "pt": "Trainee II",
+            "en": "Associate Software Developer II"
+          },
+          "start": "2023-07",
+          "end": "2024-04"
+        },
+        {
+          "title": {
+            "pt": "Estagiário de TI",
+            "en": "IT Intern"
+          },
+          "start": "2022-09",
+          "end": "2023-07"
+        }
+      ],
+      "description": {
+        "pt": "Consultoria e desenvolvimento de soluções sob medida para necessidades de negócio, unindo habilidades técnicas e de consultoria.",
+        "en": "Consulting and custom software delivery for specific business needs, combining technical and consulting skills."
+      },
+      "highlights": [
+        {
+          "pt": "Sistema centralizado de autenticação e autorização, aumentando a segurança e simplificando a gestão de acessos.",
+          "en": "Centralized authentication and authorization system, improving security and streamlining access management."
+        },
+        {
+          "pt": "Consultoria para uma grande farmacêutica na comercialização de um software de prateleira.",
+          "en": "Consulting for a major pharmaceutical company on commercializing an off-the-shelf software product."
+        },
+        {
+          "pt": "Aplicação de acompanhamento de projetos baseada em metodologias ágeis.",
+          "en": "Project tracking application built around agile methodologies."
+        },
+        {
+          "pt": "Sistema de gestão de posições para reserva de estações de trabalho em escritórios flexíveis.",
+          "en": "Position management system for booking desks in flexible office environments."
+        }
+      ],
+      "tech": ["Java", "Quarkus", "API REST", "Scrum"]
+    },
+    {
+      "company": "SERRATEC — Parque Tecnológico da Região Serrana",
+      "short": "Serratec",
+      "location": {
+        "pt": "Petrópolis, RJ",
+        "en": "Petrópolis, RJ"
+      },
+      "roles": [
+        {
+          "title": {
+            "pt": "Residente em Software (TIC)",
+            "en": "ICT Software Resident"
+          },
+          "start": "2022-03",
+          "end": "2022-08"
+        }
+      ],
+      "description": {
+        "pt": "Foi aqui que aprendi a programar: uma residência intensiva de mais de 700 horas oferecida por Senai e Serratec. Ao final, fui contratado por uma empresa parceira — e depois voltei ao programa como monitor e instrutor.",
+        "en": "This is where I learned to code: an intensive 700+ hour residency offered by Senai and Serratec. At the end I was hired by a partner company — and later came back to the program as a teaching assistant and instructor."
+      },
+      "highlights": [
+        {
+          "pt": "Algoritmos, estruturas de dados, UML e orientação a objetos com Java.",
+          "en": "Algorithms, data structures, UML and object-oriented programming in Java."
+        },
+        {
+          "pt": "APIs RESTful com Spring Boot, SQL e PostgreSQL.",
+          "en": "RESTful APIs with Spring Boot, SQL and PostgreSQL."
+        },
+        {
+          "pt": "Frontend (HTML, CSS, JavaScript) e mobile com React e React Native.",
+          "en": "Frontend (HTML, CSS, JavaScript) and mobile with React and React Native."
+        },
+        {
+          "pt": "Monitor e, depois, instrutor do programa, ajudando novas turmas a darem os primeiros passos em programação.",
+          "en": "Teaching assistant and later instructor for the program, helping new cohorts take their first steps in programming."
+        }
+      ],
+      "tech": ["Java", "Spring Boot", "PostgreSQL", "React", "React Native", "Git"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "FAETERJ Petrópolis — Faculdade de Educação Tecnológica do Estado do Rio de Janeiro",
+      "short": "FAETERJ",
+      "degree": {
+        "pt": "Tecnólogo em Tecnologia da Informação",
+        "en": "Associate Degree, Information Technology"
+      },
+      "start": "2022-08",
+      "end": "2025-07"
+    }
+  ],
+  "certifications": ["Scrum Fundamentals Certified"],
+  "stack": [
+    {
+      "group": "Backend",
+      "items": ["Java", "Quarkus", "Spring Boot", ".NET", "API REST", "Microsserviços"]
+    },
+    {
+      "group": {
+        "pt": "IA & Agentes",
+        "en": "AI & Agents"
+      },
+      "items": ["Spec-Driven Development", "AI Agents", "LLMs", "Prompt Engineering"]
+    },
+    {
+      "group": {
+        "pt": "Dados & Streaming",
+        "en": "Data & Streaming"
+      },
+      "items": ["Kafka", "Cassandra", "MongoDB", "SQL", "PostgreSQL"]
+    },
+    {
+      "group": "Frontend & Mobile",
+      "items": ["Angular", "Ionic", "React", "TypeScript"]
+    },
+    {
+      "group": "Cloud & Process",
+      "items": ["Azure", "Git", "Scrum"]
+    }
+  ],
+  "languages": [
+    {
+      "name": {
+        "pt": "Português",
+        "en": "Portuguese"
+      },
+      "level": {
+        "pt": "Nativo",
+        "en": "Native"
+      }
+    },
+    {
+      "name": {
+        "pt": "Inglês",
+        "en": "English"
+      },
+      "level": {
+        "pt": "Intermediário",
+        "en": "Intermediate"
+      }
+    }
+  ]
+}

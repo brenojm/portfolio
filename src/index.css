@@ -1,0 +1,192 @@
+@import '@fontsource-variable/geist';
+@import '@fontsource-variable/geist-mono';
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+ * Design tokens. Cores semânticas são definidas como variáveis CSS e
+ * reatribuídas no tema escuro, então os componentes nunca precisam de `dark:`
+ * para cores básicas — só usam `bg-surface`, `text-fg-muted`, etc.
+ */
+@theme {
+  --font-sans: 'Geist Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'Geist Mono Variable', ui-monospace, monospace;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-subtle: var(--fg-subtle);
+  --color-accent: var(--accent);
+  --color-accent-2: var(--accent-2);
+  --color-accent-fg: var(--accent-fg);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --animate-fade-in: fade-in 0.8s var(--ease-out-expo) both;
+  --animate-blink: blink 1s steps(1) infinite;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-flow: flow var(--flow-duration, 3s) linear infinite;
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  /* Partículas que percorrem um `offset-path` (cena do pipeline). */
+  @keyframes flow {
+    from {
+      offset-distance: 0%;
+      opacity: 0;
+    }
+    8%,
+    92% {
+      opacity: 1;
+    }
+    to {
+      offset-distance: 100%;
+      opacity: 0;
+    }
+  }
+}
+
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --surface-2: #ebebef;
+  --border: #dcdce2;
+  --fg: #0b0d12;
+  --fg-muted: #4a4f5c;
+  --fg-subtle: #6b7080;
+  --accent: #1d5cff;
+  --accent-2: #0891b2;
+  --accent-fg: #ffffff;
+}
+
+.dark {
+  --bg: #03050a;
+  --surface: #0b0f18;
+  --surface-2: #121826;
+  --border: #1d2433;
+  --fg: #f2f4f8;
+  --fg-muted: #a3abbd;
+  --fg-subtle: #7d869a;
+  --accent: #4d8dff;
+  --accent-2: #38d6f5;
+  --accent-fg: #03050a;
+}
+
+@layer base {
+  html {
+    @apply bg-bg text-fg antialiased;
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+    text-rendering: optimizeLegibility;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+    }
+  }
+
+  body {
+    @apply min-h-dvh overflow-x-clip font-sans;
+  }
+
+  /* Tailwind 4 não aplica mais cursor pointer em botões por padrão. */
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  summary {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--accent) 35%, transparent);
+  }
+
+  :focus-visible {
+    @apply rounded-sm outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@utility text-gradient {
+  background-image: linear-gradient(110deg, var(--accent) 10%, var(--accent-2) 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Gradiente metálico, à la títulos de produto da Apple. */
+@utility text-chrome {
+  background-image: linear-gradient(
+    180deg,
+    var(--fg) 30%,
+    color-mix(in oklab, var(--fg) 45%, transparent)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-6xl px-5 sm:px-8;
+}
+
+@utility eyebrow {
+  @apply font-mono text-xs tracking-[0.2em] text-accent uppercase;
+}
+
+/* Borda em gradiente cônico que gira (só o ângulo anima, a forma fica parada). */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes orbit {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@utility ring-orbit {
+  background: conic-gradient(
+    from var(--angle),
+    var(--accent),
+    transparent 30%,
+    var(--accent-2) 60%,
+    transparent 80%,
+    var(--accent)
+  );
+  animation: orbit 8s linear infinite;
+}
+
+@utility mask-fade-x {
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
