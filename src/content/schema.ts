@@ -41,6 +41,8 @@ const ExperienceSchema = z.object({
 
 export const ProfileSchema = z.object({
   name: z.string(),
+  /** URL pública do site, sem barra final (canonical e sitemap). */
+  url: z.url().refine((u) => !u.endsWith('/'), 'Sem barra no final'),
   avatar: z.string().optional(),
   headline: localized,
   location: localized,

@@ -9,19 +9,20 @@ npm install
 npm run dev
 ```
 
-| Script            | O que faz                                |
-| ----------------- | ---------------------------------------- |
-| `npm run dev`     | Servidor de desenvolvimento com HMR      |
-| `npm run build`   | Typecheck + build de produção em `dist/` |
-| `npm run preview` | Serve o build localmente                 |
-| `npm run lint`    | ESLint (inclui regras de acessibilidade) |
-| `npm run format`  | Prettier (ordena classes Tailwind)       |
+| Script            | O que faz                                  |
+| ----------------- | ------------------------------------------ |
+| `npm run dev`     | Servidor de desenvolvimento com HMR        |
+| `npm run build`   | Typecheck + build de produção em `dist/`   |
+| `npm run preview` | Serve o build localmente                   |
+| `npm run lint`    | ESLint (inclui regras de acessibilidade)   |
+| `npm run format`  | Prettier (ordena classes Tailwind)         |
+| `npm run og`      | Regenera `og.png` e `apple-touch-icon.png` |
 
 ## Editando conteúdo
 
 Todo o conteúdo fica em `src/content/` — não é preciso mexer em componentes.
 
-- **`profile.json`** — headline, frases do typewriter, sobre, números, experiência, formação, stack e links.
+- **`profile.json`** — URL do site, headline, frases do typewriter, sobre, experiência, formação, stack e links.
 - **`publications.json`** — lista de publicações.
 
 Os dois arquivos são validados por Zod (`src/content/schema.ts`) em tempo de build. Um campo errado
@@ -82,6 +83,14 @@ vite-plugins/
   vendors em chunks separados para cache, fontes self-hosted.
 - **SEO**: `<title>`/`<meta>` por página usando o suporte nativo do React 19.
 - Busca e filtro de publicações ficam na URL (`?q=` e `?tag=`), então dá para compartilhar o link.
+
+## SEO e compartilhamento
+
+- `public/og.png` é a prévia de links (LinkedIn, WhatsApp, X), gerada a partir de
+  `scripts/og-image.html` com `npm run og`, que usa o Chrome ou Edge instalado.
+- `sitemap.xml` é gerado no build a partir das publicações, e `robots.txt` aponta para ele.
+- A URL do site fica em `profile.json` (`url`) e alimenta o canonical e o sitemap. As tags
+  `og:*` e o JSON-LD em `index.html` são estáticos (crawlers sociais não executam JS).
 
 ## Deploy
 
